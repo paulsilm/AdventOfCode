@@ -1,11 +1,7 @@
 module Ex1 where
 
-readInt :: String -> Int
-readInt = read
-
 solve :: String -> Int
-solve str = solve2 (map readInt (lines str))
-
+solve str = solve2 (map read (lines str))
 
 {- Using a filter finds if there is any occurrence of the matching int
   If so, multiplies it with it and returns. -}
