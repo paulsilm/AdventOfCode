@@ -1,8 +1,6 @@
 module Ex5 where
 
 import Data.List
-import Data.List.Split
-import Text.Regex.Posix
 
 solve :: String -> Int
 solve seatlines = solve2 (lines seatlines)
