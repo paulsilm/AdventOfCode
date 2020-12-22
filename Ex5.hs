@@ -5,7 +5,16 @@ import Data.List.Split
 import Text.Regex.Posix
 
 solve :: String -> Int
-solve seatlines = solve1 (lines seatlines)
+solve seatlines = solve2 (lines seatlines)
+
+solve2 :: [String] -> Int
+solve2 seats = findSeat (sort (map seatId seats)) (-1)
+
+findSeat :: [Int] -> Int -> Int
+findSeat [] x = x
+findSeat (s:ss) prev
+  | prev + 2 == s = prev + 1
+  | otherwise = findSeat ss s
 
 solve1 :: [String] -> Int
 solve1 seats = foldr max 0 (map seatId seats)
