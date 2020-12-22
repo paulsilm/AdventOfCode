@@ -1,6 +1,6 @@
 import System.Environment
 import System.IO
-import Ex4
+import Ex5
 
 process :: String -> String
 process = show.solve
