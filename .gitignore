@@ -6,4 +6,5 @@
 *.hi
 main
 inputs/
-build/
+*.py
+*.out
